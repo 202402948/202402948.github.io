@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>영화 알아보기!</title>
+	<style>
+		header {
+			background-color: rgb(154, 166, 178);
+			text-align: center;
+		}
+
+		nav {
+			padding: 10px;
+			text-align: center;
+		}
+
+		#normal {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		#normal li {
+			display: inline-block;
+			background-color: rgb(202, 227, 235);
+			width: 80px;
+			border: 2px solid black;
+			padding: 4px;
+			text-align: center;
+		}
+
+		#section2 {
+			background-color: rgb(188, 204, 220);
+			text-align: center;
+		}
+
+		aside {
+			background-color: rgb(217, 234, 253);
+			text-align: center;
+		}
+
+		#section1 {
+			background-color: rgb(248, 250, 252);
+			text-align: center;
+		}
+
+		#n1 {
+			float: right;
+		}
+
+		table{
+			margin: 0 auto;
+		}
+
+		img{
+			margin-right: 30px;
+		}
+
+		.image-item {
+            position: relative;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+		.image-item:hover img {
+            opacity: 0.7;
+		}
+
+		#genreStyle {
+			list-style-type: disc;
+			padding: 0;
+			text-align: center;
+			list-style-position: inside;
+		}
+
+		#genreStyle li {
+			display: inline-block;
+			margin: 10px;
+		}
+
+		.image-container {
+			display: flex;
+			flex-wrap: wrap; 
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="n1">202402948 박하윤</div>
+		<br>
+		<h1>영화를 알아보세요!</h1>
+		<p>환영합니다. 영화에 대해 알아볼 수 있습니다.</p>
+		<hr>
+	</header>
+	<section id="section2">
+		<ul id="genreStyle">
+			<li>ㅣ  액션  ㅣ</li>
+			<li>ㅣ  범죄  ㅣ</li>
+			<li>ㅣ  SF  ㅣ</li>
+			<li>ㅣ  코미디  ㅣ</li>
+			<li>ㅣ  슬랩스틱 코미디  ㅣ</li>
+			<li>ㅣ  로맨스 코미디  ㅣ</li>
+			<li>ㅣ  스릴러  ㅣ</li>
+			<li>ㅣ  공포  ㅣ</li>
+			<li>ㅣ  전쟁  ㅣ</li>
+			<li>ㅣ  스포츠  ㅣ</li>
+			<li>ㅣ  판타지  ㅣ</li>
+			<li>ㅣ  음악  ㅣ</li>
+			<li>ㅣ  뮤지컬  ㅣ</li>
+			<li>ㅣ  멜로  ㅣ</li>
+			<li><button id="off">끄기</button></li>
+		</ul>
+	</section>
+	<nav>
+		<ul id="normal">
+			<li><a href="#" id="home">홈</a></li>
+			<li><a href="#" id="search">영화 검색</a></li>
+			<li><a href="#" id="ranking">영화 순위</a></li>
+			<li><a href="#" id="genre">영화 장르</a></li>
+		</ul>
+	</nav>
+	<script>
+		document.getElementById('home').addEventListener('click', function() {
+			location.reload();
+		});
+	</script>
+
+
+
+<aside>
+	<h2>영화 검색</h2>
+	<p>영화 제목을 검색해보세요.</p>
+	<input type="text" size="30"><input type="submit" value="검색">
+</aside>
+
+<script>
+    const searchButton = document.querySelector('input[type="submit"]');
+    
+    searchButton.addEventListener('click', function(event) {
+        alert('죄송합니다. 아직 검색 기능이 지원되지 않습니다.');
+    });
+</script>
+
+	<br>
+	<section id="section1">
+		<h2>역대 영화 순위</h2>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>순위</th>
+					<th>제목</th>
+					<th>감독</th>
+					<th>수익</th>
+					<th>예고편 보기</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>아바타</td>
+					<td>제임스 카메론</td>
+					<td>약 29억 2천만 달러</td>
+					<td><a href="https://youtu.be/IZpaMT1H85o">예고편</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>어벤져스: 엔드게임</td>
+					<td>안소니 루소, 조 루소</td>
+					<td>약 28억 9천만 달러</td>
+					<td><a href="https://youtu.be/Ko2NWhXI9e8">예고편</a></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>타이타닉</td>
+					<td>제임스 카메론</td>
+					<td>약 22억 6천만 달러</td>
+					<td><a href="https://youtu.be/F_KNku_Xu-0">예고편</a></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>스타워즈: 깨어난 포스</td>
+					<td>J.J.에이브럼스</td>
+					<td>약 20억 7천만 달러</td>
+					<td><a href="https://youtu.be/G7VijpXyAXI">예고편</a></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>어벤져스: 인피니티 워</td>
+					<td>안소니 루소, 조 루소</td>
+					<td>약 20억 5천만 달러</td>
+					<td><a href="https://youtu.be/F0kvfk1ghjA">예고편</a></td>
+				</tr>
+			</tbody>
+		</table>
+<br>
+		<button id="close">닫기</button>
+		
+	</section>
+	<br><br>
+
+
+
+	<script>
+		const searchLink = document.getElementById('search');
+		const searchAside = document.querySelector('aside');
+
+		searchAside.style.display = 'none';
+	
+		searchLink.addEventListener('click', function() {
+			searchAside.style.display = 'block';
+		});
+
+		//
+
+		const rankingLink = document.getElementById('ranking');
+		const RankingSec = document.querySelector('#section1');
+
+		RankingSec.style.display = 'none';
+	
+		rankingLink.addEventListener('click', function() {
+			RankingSec.style.display = 'block';
+		});
+		
+		//
+
+		const closeButton = document.getElementById('close');
+		closeButton.addEventListener('click', function() {
+    		RankingSec.style.display = 'none';
+		});
+
+		// 
+
+		const genreLink = document.getElementById('genre');
+		const genreSec = document.querySelector('#section2');
+
+		genreSec.style.display = 'none';
+	
+		genreLink.addEventListener('click', function() {
+			genreSec.style.display = 'block';
+		});
+
+		//
+
+		const offButton = document.getElementById('off');
+		offButton.addEventListener('click', function() {
+    		genreSec.style.display = 'none';
+		});
+	</script>
+
+
+<h2>현재 예매 가능한 영화</h2>
+포스터 클릭 시 소개글을 볼 수 있습니다.
+<br><br>
+
+<div class="image-container">
+	<div class="image-item">
+		<a href="harbin.html">
+		<img src="images/harbin.jpg" alt="하얼빈 포스터" width="270" height="360"></a>
+		<h3>하얼빈</h3>
+		1시간 54분 <br>액션/범죄
+	</div>
+	<div class="image-item">
+		<a href="moana.html">
+		<img src="images/moana2.jpg" alt="모아나2 포스터" width="270" height="360"></a>
+		<h3>모아나2</h3>
+		1시간 40분 <br>어린이/모험
+	</div>
+	<div class="image-item">
+		<a href="mufasa.html">
+		<img src="images/mufasa.png" alt="무파사: 라이온 킹 포스터" width="270" height="360"></a>
+		<h3>무파사: 라이온 킹</h3>
+		2시간 <br> 모험/뮤지컬
+	</div>
+	<div class="image-item">
+		<a href="wicked.html">
+		<img src="images/wicked.png" alt="위키드 포스터" width="270" height="360"></a>
+		<h3>위키드</h3>
+		2시간 40분 <br> 뮤지컬/판타지
+	</div>
+	<div class="image-item">
+		<a href="substance.html">
+		<img src="images/sunstance.jpg" alt="서브스턴스 포스터" width="270" height="360"></a>
+		<h3>서브스턴스</h3>
+		2시간 21분 <br> 공포/SF
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
